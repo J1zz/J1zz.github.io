@@ -1,8 +1,31 @@
 @charset "utf-8";
+
+:root {
+    --academic-blue: #255b86;
+    --academic-red: #8f1d22;
+    --text-main: #25313b;
+    --text-muted: #6d7882;
+    --line: #e5e9ec;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Lato", sans-serif;
+    color: var(--text-main);
+    font-family: "Lato", "Noto Sans SC", sans-serif;
     font-weight: 400;
-    padding-top: 5.0rem;
+    padding-top: 5rem;
+}
+
+a {
+    color: var(--academic-blue);
+}
+
+a:hover {
+    color: #173d5d;
+    text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -11,47 +34,64 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .card {
-    border-radius: 0.8rem!important;
+    border-radius: .8rem !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 .18rem .8rem rgba(28, 45, 58, .08) !important;
 }
 
 .card-img-overlay {
-    border-radius: 0.8rem!important;
+    border-radius: .8rem !important;
 }
 
 .rounded-xl {
-    border-radius: 0.8rem!important;
+    border-radius: .8rem !important;
 }
 
 .rounded-xl-bottom {
-    border-bottom-right-radius: 0.8rem !important;
-    border-bottom-left-radius: 0.8rem !important;
+    border-bottom-right-radius: .8rem !important;
+    border-bottom-left-radius: .8rem !important;
 }
 
 .rounded-xl-top {
-    border-top-left-radius: 0.8rem !important;
-    border-top-right-radius: 0.8rem !important;
+    border-top-left-radius: .8rem !important;
+    border-top-right-radius: .8rem !important;
 }
 
-
-.text-profile-position {
+.text-profile-position,
+.text-profile-bio {
     font-weight: 400;
 }
 
 .text-profile-bio {
-    /* font-family: "Raleway"; */
-    font-weight: 400;
+    color: #45525d;
+    line-height: 1.7;
+}
+
+.text-profile-bio strong {
+    color: var(--text-main);
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: rgba(255, 255, 255, .82) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 }
 
+.navbar-brand {
+    color: var(--text-main) !important;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+    color: var(--academic-blue);
+    font-weight: 700;
+}
+
 .inline-badge {
     height: 16px;
-    vertical-align: -10%;
     margin-right: 2px;
+    vertical-align: -10%;
     line-break: unset;
 }
 
@@ -59,9 +99,71 @@ h1, h2, h3, h4, h5, h6,
     white-space: nowrap;
 }
 
+.profile-portrait {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: .65rem;
+}
+
+.mobile-portrait {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-name-cn {
+    margin-top: .15rem;
+    color: var(--text-muted);
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+}
+
+.research-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    margin-top: 1.25rem;
+}
+
+.research-keywords span {
+    padding: .28rem .68rem;
+    color: #2b5d50;
+    background: #e9f2ef;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 700;
+}
+
+.experience-logo {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    object-fit: contain;
+}
+
+.experience-logo-text {
+    display: inline-grid;
+    place-items: center;
+    color: #fff;
+    background: var(--academic-blue);
+    border-radius: 5px;
+    font-size: .48rem;
+    font-weight: 900;
+    letter-spacing: -.02em;
+}
+
 .cover-image {
     width: 180px;
     max-height: 120px;
+}
+
+.publication-cover {
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    background-color: #fff;
 }
 
 .abstract-body {
@@ -69,19 +171,19 @@ h1, h2, h3, h4, h5, h6,
 }
 
 img.lazy {
+    min-height: 80px;
     background-image: url('images/loading.gif');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 50px 50px;
-    min-height: 80px;
 }
 
 div.lazy {
+    min-height: 80px;
     background-image: url('images/loading.gif');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 50px 50px;
-    min-height: 80px;
 }
 
 .badge-publication {
@@ -89,5 +191,57 @@ div.lazy {
 }
 
 .email-text {
-    font-family: Source Code Pro, monospace;
+    font-family: "Source Code Pro", monospace;
+    font-size: .72rem;
+}
+
+.page-heading {
+    padding: 1.5rem 0 .5rem;
+}
+
+.page-heading h1 {
+    margin-bottom: .35rem;
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.publication-year {
+    scroll-margin-top: 5.5rem;
+    color: var(--academic-red);
+}
+
+.publication-year + .card,
+.publication-year + div {
+    overflow: hidden;
+}
+
+.abstract-links a {
+    font-weight: 700;
+}
+
+.nav-pills .nav-link.active {
+    background: var(--academic-blue);
+}
+
+.footer {
+    color: var(--text-muted);
+}
+
+@media (max-width: 767.98px) {
+    .sticky-top {
+        position: static;
+    }
+
+    .page-heading {
+        padding-top: .5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

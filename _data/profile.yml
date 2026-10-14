@@ -1,61 +1,76 @@
-primary_name: "Your Name"
-secondary_name: ""
-navbar_name: "Your Name"
+primary_name: "Yizhen Jiang"
+navbar_name: "Yizhen Jiang"
 
 positions:
-- name: Title or Position
-- name: Affiliation Name
-  logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+  - name: Ph.D. Student in Data Science and Engineering
+  - name: Peking University
 
-
-email: "your@email.com"
-# cv_link: link-to-your-cv-file
-gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
-github: your_github_id
-twitter: your_twitter_id  # Do not include the '@' symbol
-# wechat_qrcode: /assets/images/etc/wechat.jpg
-# wechat_prompt: >-
-#   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
-# linkedin: your-linked-in-id
-# orcid: 0000-0000-0000-0000
+email: 2601111698@stu.pku.edu.cn
+gscholar: HbijXJIAAAAJ
 
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
+    I am a first-year Ph.D. student in Data Science and Engineering at the
+    <strong>Center for Data Science, Academy for Advanced Interdisciplinary Studies,
+    Peking University</strong>. I am advised by
+    <strong><a href="https://zwt233.github.io/" target="_blank" rel="noopener">Prof. Wentao Zhang</a></strong>
+    and participate in a joint training program with Beijing Zhongguancun Academy.
   </p>
   <p>
-    There are various patterns of a bicolour cat. These range from the Van-patterned (colour on the crown of the head 
-    and the tail only) to a solid colour with a throat locket or medallion. Bicolour coats are found in many cat breeds, 
-    as well as being common in domestic longhair and domestic shorthair cats.
+    My research sits at the intersection of <strong>data-centric AI</strong> and agentic systems.
+    I am particularly interested in how better data and evaluation can help
+    <strong>computer-use and hybrid agents</strong> learn more effectively and behave more reliably.
   </p>
+  <p>
+    I am currently a research intern with the <strong>Qwen team at Alibaba</strong>, working with
+    <strong>Que Shen</strong> on computer-use agents. I am also a core contributor to
+    <a href="https://github.com/OpenDCAI/DataFlow" target="_blank" rel="noopener">DataFlow</a>.
+    Previously, I worked on multimodal pre-training with the <strong>LongCat team at Meituan</strong>.
+    I received my B.S. in Information and Computing Science from Beijing University of Posts and
+    Telecommunications, where I was advised by <strong>Prof. Qinmeng Zou</strong>.
+  </p>
+  <div class="research-keywords">
+    <span>Data-centric AI</span><span>Computer-Use Agents (CUA)</span><span>Hybrid Agents</span>
+  </div>
 
-portrait_url: /assets/images/photos/portrait.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+portrait_url: /assets/images/photos/portrait-yizhen.jpg
+portrait_caption: Yizhen Jiang
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
-  position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
-    Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+  - name: Peking University
+    logo: /assets/images/badges/PKU_red.png
+    dept: Center for Data Science, Academy for Advanced Interdisciplinary Studies
+    position: Ph.D. in Data Science and Engineering
+    date: Sep. 2026 - Jul. 2031
+  - name: Beijing University of Posts and Telecommunications
+    logo: /assets/images/badges/BUPT_blue.png
+    dept: Information and Computing Science
+    position: B.S.
+    date: Sep. 2022 - Jul. 2026
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
-
+experience:
+  - name: Alibaba · Qwen Team
+    logo: /assets/images/badges/qwen.png
+    dept: Computer-Use Agents
+    position: Research Intern
+    date: Mar. 2026 - Present
+  - name: DataFlow
+    logo: /assets/images/badges/dataflow.png
+    dept: Open-source LLM Data Preparation Framework
+    position: Core Contributor
+    date: Aug. 2025 - Present
+  - name: Meituan · LongCat Team
+    logo: /assets/images/badges/longcat.png
+    dept: Multimodal Pre-training
+    position: Research Intern
+    date: Sep. 2025 - Dec. 2025
 awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+  - name: National Scholarship
+    date: 2024
+  - name: National Scholarship
+    date: 2023
+  - name: China Undergraduate Mathematical Contest in Modeling · Beijing Second Prize
+    date: 2024
+  - name: Chinese Mathematics Competitions · National Third Prize
+    date: 2024
