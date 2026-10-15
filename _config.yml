@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: "Yizhen Jiang"
 description: "Ph.D. student at Peking University working on data-centric AI and computer-use agents."
-url: "https://jyz.github.io"
+url: "https://j1zz.github.io"
 baseurl: ""
 lang: en
 timezone: Asia/Shanghai
