@@ -22,7 +22,7 @@
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <div class="h4 mb-0">{{ site.data.profile.primary_name }}</div>
+                        <h1 class="h4 mb-0">{{ site.data.profile.primary_name | escape }}</h1>
                         {% if site.data.profile.secondary_name %}
                         <div class="profile-name-cn">{{ site.data.profile.secondary_name }}</div>
                         {% endif %}

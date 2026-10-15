@@ -1,0 +1,37 @@
+{% assign canonical_url = page.url | replace: '/index.html', '/' | absolute_url %}
+<link rel="canonical" href="{{ canonical_url | escape }}">
+<meta name="author" content="{{ site.data.profile.primary_name | escape }}">
+<meta property="og:url" content="{{ canonical_url | escape }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+
+{% if site.google_site_verification %}
+<meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">
+{% endif %}
+{% if site.bing_site_verification %}
+<meta name="msvalidate.01" content="{{ site.bing_site_verification | escape }}">
+{% endif %}
+{% if site.baidu_site_verification %}
+<meta name="baidu-site-verification" content="{{ site.baidu_site_verification | escape }}">
+{% endif %}
+
+{% if page.url == '/' or page.url == '/index.html' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": {{ canonical_url | append: '#profile' | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "name": {{ site.data.profile.primary_name | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": {{ canonical_url | append: '#person' | jsonify }},
+    "name": {{ site.data.profile.primary_name | jsonify }},
+    "url": {{ canonical_url | jsonify }},
+    "description": {{ page.description | default: site.description | jsonify }},
+    "image": {{ site.data.profile.portrait_url | absolute_url | jsonify }},
+    "sameAs": {{ site.data.profile.same_as | jsonify }}
+  }
+}
+</script>
+{% endif %}
